@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("/hello")
     String sayHello() {
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(com.springinaction.knights.config.KnightConfig.class);
-//        ctx.refresh();
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(
+                com.springinaction.knights.config.KnightConfig.class
+        );
 
         Knight myKnight = (BraveKnight)ctx.getBean("knight");
         myKnight.embarkOnQuest();

@@ -1,7 +1,7 @@
 package soundbox;
 
-//import org.springframework.stereotype.Component;
-//@Component
+import org.springframework.stereotype.Component;
+@Component
 public class MariAmma implements CompactDisc {
     private String title = "MariAmma";
     private String artist = "The Beatles";
